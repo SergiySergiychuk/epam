@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>lab1</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button>home</button>
+            <button>info</button>
+        </nav>
+        <article class="m-5 text-center display-4 ">lab1</article>
+    </header>
+    <main>
+        <aside class="float-left m-5 bg-secondary ">Реклама</aside>
+        <audio controls loop class="float-left m-5">
+            <source src="../1.mp3" type="audio/mp3">
+        </audio>
+        <p class="float-left">User <bdi>إيان</bdi>: 90 points</p>
+        <canvas id="myCanvas" class="float-left m-5"></canvas>
+        <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+        <input list="browserss" name="browser" class="float-left m-5">
+        <datalist id="browserss" class="float-left m-5">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <details class="float-left m-5">
+            <summary>Important info</summary>
+            <p>dich</p>
+        </details>
+        <dialog id="dialog" open>This is an open dialog window</dialog>
+        <figure class="w-25">
+            <img src="../1.jpg" alt="img" class="w-100">
+            <figcaption>simple img</figcaption>
+        </figure>
+        <p>not important<mark>important</mark></p>
+        <meter id="disk_c" value="6" min="0" max="10"></meter><br>
+        <form oninput="y.value=parseInt(a.value)">
+            <input type="number" id="a" value="50"> =
+            <output name="y" for="a"></output>
+        </form>
+        <picture>
+            <source media="(min-width: 650px)" srcset="../1.jpg">
+            <img src="../1.jpg" alt="img" class="w-25">
+        </picture>
+        <label for="file">Downloading progress:</label>
+        <progress id="file" value="32" max="100"> 32% </progress>
+        <section>
+            <h1>WWF</h1>
+            <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+        </section>
+        <template>
+              <h2>КУ</h2>
+        </template>
+        <h1 class="word">метоксихлор<wbr>диэтиламино<wbr>метил<wbr>бутил<wbr>амино<wbr>акридин</h1>
+        <video width="320" height="240" controls>
+                <source src="../ppap.mp4" type="video/mp4">
+                <track kind="subtitles" src="../ppap.vtt" srclang="uk" label="Український">
+                <track kind="subtitles" src="../ppap.vtt" srclang="en" label="English">
+
+                Your browser does not support the video tag.
+            </video>
+    </main>
+
+
+
+
+
+
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </footer>
+</body>
+
+
+</html>

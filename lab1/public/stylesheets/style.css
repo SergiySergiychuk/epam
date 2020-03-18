@@ -1,0 +1,14 @@
+body {
+    height: 100%;
+    background-image: url("/home/eclipse/js/lab1/newspaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 60%;
+}
+
+.grid-conteiner {
+    display: grid;
+}
