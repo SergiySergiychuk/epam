@@ -1,16 +1,16 @@
-let children = [0, 1, 2, 3, 4, 5];
-let profession = ["ERP-програміст", "HTML-верстальник", "Адміністратор бази даних", "Веб-дизайнер"];
-let p_name = ["Катя", "Аня", "Софія", "Наталка", "Юля", "Віка"];
-let country = [
+const children = [0, 1, 2, 3, 4, 5];
+const profession = ["ERP-програміст", "HTML-верстальник", "Адміністратор бази даних", "Веб-дизайнер"];
+const p_name = ["Катя", "Аня", "Софія", "Наталка", "Юля", "Віка"];
+const country = [
     { name: "Великобританія", city: "Лондон" },
     { name: "Канада", city: "Оттава" },
     { name: "США", city: "Вашингтон" },
     { name: "Данія", city: "Капенгаген" }
 ]
-let user_children;
-let user_profession;
-let user_p_name;
-let user_city;
+const user_children;
+const user_profession;
+const user_p_name;
+const user_city;
 
 for (const elem of children) {
     if (confirm('Ви хочете: ' + elem + ' дітей')) {
