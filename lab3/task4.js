@@ -1,6 +1,6 @@
 const body = document.getElementsByTagName('body')[0];
 let p;
-var arr = [
+const arr = [
     { value: 100, type: 'USD' },
     { value: 215, type: 'EUR' },
     { value: 7, type: 'EUR' },
