@@ -37,4 +37,4 @@ for (const elem of country) {
     }
 }
 alert('Ви укладите шлюб з ' + user_p_name + ' та у вас буде ' + user_children + ' дітей');
-alert('Ви переїдите у місто ' + user_city + ' на посаду ' + user_profession)
+alert('Ви переїдите у місто ' + user_city + ' на посаду ' + user_profession);

@@ -20,25 +20,20 @@ for (const object of arr) {
 }
 ////
 document.write('Task1');
-const reduser = (accumulator, currentValue) => {
-    if (currentValue.type === 'USD' && currentValue.value < 100) {
-        accumulator.value = accumulator.value + currentValue.value;
-    }
-    return accumulator;
-}
-const a = arr.reduce(reduser, { value: 0, type: 'EUR' })
+const sum = arr
+    .filter(element => (element.type === 'USD') && (element.value < 100))
+    .reduce((accumulator, currentValue) => accumulator + currentValue.value, 0);
 p = document.createElement('p');
 body.appendChild(p);
-p.innerText = 'Cума всіх значень value у яких тип ‘USD’ та value менше за 100: ' + a.value;
+p.innerText = 'Cума всіх значень value у яких тип ‘USD’ та value менше за 100: ' + sum;
 ////
 document.write('Task2');
-let arr2 = arr.map((currentValue) => {
-    if (currentValue.type === 'EUR') {
-        currentValue.value = currentValue.value * 2;
-    }
-    return currentValue;
-})
-arr2 = arr2.filter(element => element.type === 'EUR')
+let arr2 = arr
+    .filter(element => element.type === 'EUR')
+    .map((currentValue) => {
+        currentValue.value *= 2;
+        return currentValue;
+    })
 for (const object of arr2) {
     p = document.createElement('p');
     body.appendChild(p);
