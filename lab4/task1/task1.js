@@ -15,11 +15,15 @@ button.addEventListener('click', () => {
             if (/[^a-zA-Z]/.test(alterText.value)) {
                 alert('Only latin letters');
             } else {
-                console.log(true);
-                img.style.width = `${width.value}px`;
-                img.style.height = `${height.value}px`;
-                img.style.border = `solid ${thickness.value}px ${colour.value}`;
-                img.attributes.alt = alterText.value;
+                if (isColor(colour.value)) {
+                    img.style.width = `${width.value}px`;
+                    img.style.height = `${height.value}px`;
+                    img.style.border = `solid ${thickness.value}px ${colour.value}`;
+                    img.attributes.alt = alterText.value;
+                } else {
+                    alert('Incorrect colour');
+                }
+
             }
         } else {
             alert('Incorrect values');
@@ -28,3 +32,15 @@ button.addEventListener('click', () => {
         alert('Fill all fields');
     }
 })
+
+function isColor(strColor) {
+    var s = new Option().style;
+    s.color = strColor;
+    var test1 = s.color == strColor;
+    var test2 = /^#[0-9A-F]{6}$/i.test(strColor);
+    if (test1 == true || test2 == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
