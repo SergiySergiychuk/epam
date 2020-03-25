@@ -1,0 +1,49 @@
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 800px;
+}
+
+a {
+    font-weight: 100;
+}
+
+button {
+    float: left;
+}
+
+.main__diagram {
+    display: table;
+    vertical-align: bottom;
+    float: left;
+    margin-top: 40px;
+    padding-top: 20px;
+    /* border: solid 2px black; */
+}
+
+.main__diagram-element {
+    position: relative;
+    vertical-align: bottom;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+.main__alterText {
+    position: absolute;
+    bottom: 45px;
+    left: 30px;
+    font-size: 20px;
+    font-family: serif;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}

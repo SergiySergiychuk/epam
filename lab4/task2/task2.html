@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./task2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <main>
+        <table class="table table-striped">
+            <thead class="thead-dark ">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Підприємство</th>
+                    <th scope="col">Дохід</th>
+                </tr>
+            </thead>
+            <tbody id="main-tbody">
+                <tr>
+                    <td><a class="delete-link text-primary" type="button">Видалити</a></th>
+                        <td class="company-name" contenteditable>АО-1</td>
+                        <td class="company-value" contenteditable>10</td>
+                </tr>
+                <tr>
+                    <td><a class="delete-link text-primary" type="button">Видалити</a></th>
+                        <td class="company-name" contenteditable>АО-2</td>
+                        <td class="company-value" contenteditable>30</td>
+                </tr>
+                <tr>
+                    <td><a class="delete-link text-primary" type="button">Видалити</a></th>
+                        <td class="company-name" contenteditable>АО-3</td>
+                        <td class="company-value" contenteditable>20</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="addButton" type="button" class="btn btn-outline-secondary">Додати підприємство</button>
+
+        <div id="main-diagram" class="main__diagram">
+
+        </div>
+    </main>
+
+</body>
+<script src="./task2.js"></script>
+
+</html>
