@@ -41,8 +41,8 @@ addButton.addEventListener('click', () => {
     buildDiagma();
 })
 tbody.addEventListener('keyup', (element) => {
-
-    if (Number(element.target.innerText) || element.target.innerText == 0 ||
+    const innerText = element.target.innerText;
+    if (Number(innerText) || innerText == 0 ||
         element.target.attributes.class.value == 'company-name') {
         buildDiagma();
     } else {
@@ -73,7 +73,7 @@ function insertContentInDiagramElement(element, diagramElement, colour) {
     const colourBlock = document.createElement('div');
     colourBlock.setAttribute('class', 'main__diagram-colourBlock');
     colourBlock.style.cssText = `width:${oneRowWidth}px;height:${element.innerText*4}px;`;
-    colourBlock.style.backgroundColor = '#' + (colour.toString(16) + '000000').substring(2, 8).toUpperCase();
+    colourBlock.style.backgroundColor = `#${(`${colour.toString(16)}000000`).substring(2, 8).toUpperCase()}`;
     createAlterTextEvents(element, colourBlock);
     const p = document.createElement('p');
     p.innerText = element.parentElement.getElementsByClassName('company-name')[0].innerText;
