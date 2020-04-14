@@ -13,9 +13,8 @@ const showAlterTextEvent = (element) => {
 const hideAlterTextEvent = (element) => {
     element.target.getElementsByClassName('main__alterText')[0].setAttribute('hidden', '');
 }
-deleteLinks.forEach(element => {
-    element.addEventListener('click', deleteButtonEvent)
-});
+deleteLinks.forEach(element => element.addEventListener('click', deleteButtonEvent));
+
 addButton.addEventListener('click', () => {
     const tr = document.createElement('tr');
     const td1 = document.createElement('td');
@@ -68,7 +67,9 @@ function insertContentInDiagramElement(element, diagramElement, colour) {
     const oneRowWidth = (allWidth - (columnNumber + 1) * margin) / columnNumber;
     //diagram element settings
     diagramElement.setAttribute('class', 'main__diagram-element');
-    diagramElement.style.cssText = `width:${oneRowWidth}px;height:${element.innerText*4 + 40}px;`;
+    diagramElement.style.cssText = `
+                                    width:${oneRowWidth}px;
+                                    height:${element.innerText*4 + 40}px;`;
     //colour block settings
     const colourBlock = document.createElement('div');
     colourBlock.setAttribute('class', 'main__diagram-colourBlock');
