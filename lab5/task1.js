@@ -4,7 +4,8 @@ const url = 'https://randomuser.me/api';
 
 const loadNewData = async function loadNewData(numberOfResults) {
     const http = new XMLHttpRequest();
-    http.open("GET", url + `/?results=${numberOfResults}`);
+    // console.log(url.concat('lkjlj'))
+    http.open("GET", url.concat(`/?results=${numberOfResults}`));
     http.responseType = 'json';
     http.send();
     return new Promise((resolve, reject) => {
@@ -18,10 +19,10 @@ const loadNewData = async function loadNewData(numberOfResults) {
     })
 }
 const appendDataToDocument = function(data) {
-    let fragment = document.createDocumentFragment();
+    const fragment = document.createDocumentFragment();
     data.forEach(element => {
         console.log(element.picture.large);
-        let img = document.createElement('img');
+        const img = document.createElement('img');
         img.setAttribute('src', element.picture.large);
         fragment.appendChild(img);
     });
@@ -30,7 +31,7 @@ const appendDataToDocument = function(data) {
 }
 const showLoadingAnimation = function showLoadingAnimation() {
 
-    loadingAnimation.style.top = document.documentElement.scrollHeight + 'px';
+    loadingAnimation.style.top = document.documentElement.scrollHeight.toString().concat('px');
     loadingAnimation.removeAttribute('hidden');
     document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight;
 }
