@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 1024px;
+    background-color: #f0f8ff;
+    display: grid;
+    grid-template-columns: repeat(5, 128px);
+    grid-gap: 40px;
+    box-sizing: border-box;
+    padding-left: 112px;
+    padding-top: 40px;
+    margin-bottom: 100px;
+}
+
+.main__animation {
+    position: absolute;
+}
