@@ -36,14 +36,19 @@ const showLoadingAnimation = function showLoadingAnimation() {
     document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight;
 }
 const startDataPromise = loadNewData(50);
-startDataPromise.then(appendDataToDocument);
+startDataPromise
+    .then(appendDataToDocument)
+    .error(x => console.log(x))
+
 
 window.addEventListener('scroll', function() {
     if (document.documentElement.clientHeight == document.documentElement.getBoundingClientRect().bottom) {
         showLoadingAnimation();
         setTimeout(() => {
             const newDataPromise = loadNewData(25);
-            newDataPromise.then(appendDataToDocument);
+            newDataPromise
+                .then(appendDataToDocument)
+                .error(x => console.log(x))
         }, 1000);
     }
 });
