@@ -4,7 +4,6 @@ const url = 'https://randomuser.me/api';
 
 const loadNewData = async function loadNewData(numberOfResults) {
     const http = new XMLHttpRequest();
-    // console.log(url.concat('lkjlj'))
     http.open("GET", url.concat(`/?results=${numberOfResults}`));
     http.responseType = 'json';
     http.send();

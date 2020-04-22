@@ -1,0 +1,14 @@
+body {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.mainForm {
+    width: 800px;
+}
+
+.uncorrect-message {
+    color: red;
+}
