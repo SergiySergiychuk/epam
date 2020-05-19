@@ -22,45 +22,45 @@
 
             var posts = DB.getPosts();
             for (var i = 0; i < posts.length; i++) {
-                // const table = document.createElement('table');
-                // table.setAttribute('class', 'message');
-                // const tr = document.createElement('tr');
-                // table.appendChild(tr);
-                // const td1 = document.createElement('td');
-                // tr.appendChild(td1);
-                // td1.setAttribute('valign', 'top');
-                // const img = document.createElement('img');
-                // td1.appendChild(img);
-                // img.setAttribute('src', 'https://xss-game.appspot.com/static/level2_icon.png');
-                // const td2 = document.createElement('td');
-                // tr.appendChild(td2);
-                // td2.setAttribute('valign', 'top');
-                // td2.setAttribute('class', 'message-container');
-                // const shim = document.createElement('div');
-                // td2.appendChild(shim);
-                // shim.setAttribute('class', 'shim');
-                // const b = document.createElement('b');
-                // td2.appendChild(b);
-                // b.innerText = 'You';
-                // const span = document.createElement('span');
-                // td2.appendChild(span);
-                // span.setAttribute('class', 'data');
-                // span.innerText = new Date(posts[i].date);
-                // const blockquote = document.createElement('blockquote');
-                // td2.appendChild(blockquote);
-                // blockquote.innerText = posts[i].message;
-                // containerEl.appendChild(table);
+                const table = document.createElement('table');
+                table.setAttribute('class', 'message');
+                const tr = document.createElement('tr');
+                table.appendChild(tr);
+                const td1 = document.createElement('td');
+                tr.appendChild(td1);
+                td1.setAttribute('valign', 'top');
+                const img = document.createElement('img');
+                td1.appendChild(img);
+                img.setAttribute('src', 'https://xss-game.appspot.com/static/level2_icon.png');
+                const td2 = document.createElement('td');
+                tr.appendChild(td2);
+                td2.setAttribute('valign', 'top');
+                td2.setAttribute('class', 'message-container');
+                const shim = document.createElement('div');
+                td2.appendChild(shim);
+                shim.setAttribute('class', 'shim');
+                const b = document.createElement('b');
+                td2.appendChild(b);
+                b.innerText = 'You';
+                const span = document.createElement('span');
+                td2.appendChild(span);
+                span.setAttribute('class', 'data');
+                span.innerText = new Date(posts[i].date);
+                const blockquote = document.createElement('blockquote');
+                td2.appendChild(blockquote);
+                blockquote.innerText = posts[i].message;
+                containerEl.appendChild(table);
 
 
-                var html = '<table class="message"> <tr> <td valign=top> ' +
-                    '<img src="https://xss-game.appspot.com/static/level2_icon.png"> </td> <td valign=top ' +
-                    ' class="message-container"> <div class="shim"></div>';
+                // var html = '<table class="message"> <tr> <td valign=top> ' +
+                //     '<img src="https://xss-game.appspot.com/static/level2_icon.png"> </td> <td valign=top ' +
+                //     ' class="message-container"> <div class="shim"></div>';
 
-                html += '<b>You</b>';
-                html += '<span class="date">' + new Date(posts[i].date) + '</span>';
-                html += "<blockquote>" + posts[i].message + "</blockquote";
-                html += "</td></tr></table>"
-                containerEl.innerHTML += html;
+                // html += '<b>You</b>';
+                // html += '<span class="date">' + new Date(posts[i].date) + '</span>';
+                // html += "<blockquote>" + posts[i].message + "</blockquote";
+                // html += "</td></tr></table>"
+                // containerEl.innerHTML += html;
             }
         }
 
